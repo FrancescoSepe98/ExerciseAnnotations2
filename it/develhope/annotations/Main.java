@@ -21,6 +21,8 @@ public class Main {
         validator.validatorMap(IsAString.class,new IsAStringValidator());
         System.out.println("persona contiene solo Stringhe? " + validator.validate(persona));
         System.out.println("greetings contiene solo Stringhe? " + validator.validate(greetings));
+        System.out.println("greetings2 contiene solo Stringhe? " + validator.validate(greetings2));//quindi non funziona
+        //l'istance of su un oggetto il cui valore e' Null :(
 
         System.out.println("----------------------------Start Esercizio effettivo--------------------------");
         Method [] method = Greetings.class.getMethods();
@@ -34,6 +36,5 @@ public class Main {
                 method[0].getAnnotation(DevAnnotation.class).devName() + " " + method[0].getAnnotation(DevAnnotation.class).devSurname());
         System.out.println("Il metodo " + method[1].getName() + " e' stato scritto da " +
                 method[1].getAnnotation(DevAnnotation.class).devName() + " " + method[1].getAnnotation(DevAnnotation.class).devSurname());
-
     }
 }
